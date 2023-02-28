@@ -12,7 +12,7 @@ RUN apt-get update \
     apt-get update && \
     ACCEPT_EULA=Y apt-get install -y msodbcsql18 && \
     docker-php-ext-configure gd --with-freetype --with-jpeg && \
-    docker-php-ext-install -j$(nproc) gd zip mysqli soap intl bcmath pdo pdo_mysql opcache
+    docker-php-ext-install -j$(nproc) gd zip mysqli soap intl bcmath pdo pdo_mysql opcache sockets
 
 RUN pecl install mongodb && \
     pecl install sqlsrv && \
