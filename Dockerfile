@@ -19,10 +19,12 @@ RUN pecl install mongodb && \
     pecl install pdo_sqlsrv && \
     pecl install grpc && \
     pecl install protobuf && \
+    pecl install redis && \
     docker-php-ext-enable mongodb && \
     docker-php-ext-enable sqlsrv && \
     docker-php-ext-enable pdo_sqlsrv && \
     docker-php-ext-enable grpc && \
+    docker-php-ext-enable redis && \
     docker-php-ext-enable protobuf
 
 RUN apt-get clean
